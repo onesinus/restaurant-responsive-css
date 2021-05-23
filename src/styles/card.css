@@ -1,0 +1,36 @@
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-row-gap: 10px;
+	column-gap: 10px;
+}
+
+.card-item {
+	padding: 26px;
+	border: 1px dotted gray;
+}
+
+.card-header {
+	text-align: center;
+}
+
+
+.card-body h5, .card-body h6 {
+	text-align: center;
+}
+
+.card-body h5 {
+	font-size: 16pt;
+}
+
+.card-body h6 {
+	margin-top: 1%;
+	font-size: 14pt;
+}
+
+.card-body p {
+	margin-top: 2%;
+	font-size: 12pt;
+	text-align: justify;
+	text-justify: inter-word;
+}

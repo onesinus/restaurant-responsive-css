@@ -1,0 +1,87 @@
+@media screen and (min-width: 200px) {
+	.app_name {
+		font-size: 22pt;
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	#drawer {
+		margin-top: 15%;
+		width: 50%;
+	}
+
+	.app_name {
+		padding-left: 20%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		display: grid;
+		grid-template-columns: 1fr;
+		background-color: #F5F6FB;
+	}
+
+	.app_name {
+		margin-left: 20%;
+		padding-top: 3%;
+	}
+
+	#hamburger {
+		display: none;
+	}
+
+	#drawer {
+		width: 100%;
+		transform: translate(0,0);
+		background-color: #F9F9F9;
+		height: 20%;
+		margin-top: 10%;
+	}
+
+	#drawer a {
+		color: black;
+	}
+
+	#drawer li {
+		display: inline-block;
+		padding: 3.5% 11.5%;
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	.app_name {
+		font-size: 40pt;
+	}
+
+	#drawer li {
+		padding: 3% 12%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	#drawer li {
+		padding: 2% 12%;
+	}
+
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	#drawer {
+		height: 13%;
+	}
+}
