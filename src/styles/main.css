@@ -22,6 +22,7 @@ header {
 }
 
 #drawer {
+	z-index: 99;
 	width: 100%;
 	margin-top: 18%;
 	position: absolute;
@@ -50,8 +51,11 @@ header {
 }
 
 #drawer a {
+	display: inline-block;
 	color: white;
 	font-size: 14pt;
+	min-width: 44px;
+	min-height: 44px;	
 }
 
 
@@ -63,6 +67,8 @@ a {
 	text-decoration: none;
 	color: black;
 	font-size: 40pt;
+	min-width: 44px;
+	min-height: 44px;
 }
 
 a:hover {
@@ -70,9 +76,16 @@ a:hover {
 }
 
 
+.jumbotron {
+	position: relative;
+	margin-top: 3%;
+}
+
 .jumbotron img {
-	width: 100%;
     display: block;
+	width: 100%;
+	min-width: 420px;
+    object-fit: cover;
 }
 
 h4 {
