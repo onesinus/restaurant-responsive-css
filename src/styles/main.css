@@ -40,6 +40,11 @@ header {
 	font-size: 24pt;
 	margin-left: 30%;
 	width: 30%;
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;        
 }
 
 #drawer ul {
@@ -47,7 +52,7 @@ header {
 }
 
 #drawer li {
-	padding: 18px 0px;
+	padding: 18px 0;
 }
 
 #drawer a {

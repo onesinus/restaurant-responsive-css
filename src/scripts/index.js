@@ -37,7 +37,11 @@ function loadData() {
 		content += `
 			<div class="card-item">
 			    <div class="card-header">
-					<img src="${restaurant.pictureId}" width="350" height="350" alt="Logo Resto">
+					<img 
+						src="${restaurant.pictureId}" 
+						width="350" height="350" 
+						alt="${restaurant.name}"
+					>
 			    </div>
 			    <div class="card-body">
 			    	<h5>${restaurant.city}</h5>
