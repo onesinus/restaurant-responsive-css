@@ -29,6 +29,7 @@ header {
 	transform: translate(-100%, 0);
 	transition: transform 0.3s ease-in-out;
 	background-color: #111;
+	top: 0;
 }
 
 #drawer.open {
@@ -98,7 +99,7 @@ h4 {
 	font-size: 30pt;
 }
 
-p {
+.jumbotron p {
 	font-size: 24pt;
 }
 
@@ -146,4 +147,12 @@ footer {
 
 .mt2 {
 	margin-top: 2%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.nobold {
+	font-weight: 500;
 }
