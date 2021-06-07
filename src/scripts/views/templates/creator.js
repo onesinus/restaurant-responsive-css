@@ -13,7 +13,7 @@ const createRestaurantItemTemplate = (restaurant) => `
         </div>
         <div class="card-body">
             <h5>${restaurant.city}</h5>
-            <h6>Rating: ${restaurant.rating}</h6>
+            <h6><i class="fa fa-star"></i> ${restaurant.rating}</h6>
             <p>${maxString(restaurant.description, 300)}</p>
         </div>
     </div>
