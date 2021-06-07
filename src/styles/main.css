@@ -44,11 +44,12 @@ header {
     border: none;
     cursor:pointer;
     overflow: hidden;
-    outline:none;        
+    outline:none;
 }
 
 #drawer ul {
 	padding: 0 24px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);	
 }
 
 #drawer li {

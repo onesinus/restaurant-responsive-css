@@ -24,7 +24,6 @@
 	header {
 		display: grid;
 		grid-template-columns: 1fr;
-		background-color: #F5F6FB;
 	}
 
 	.app_name {

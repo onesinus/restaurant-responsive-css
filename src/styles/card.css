@@ -1,6 +1,6 @@
 .card-item {
 	padding: 26px;
-	border: 1px dotted gray;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-header {
@@ -23,6 +23,7 @@
 
 .card-body p {
 	margin-top: 2%;
+	padding: 5%;
 	font-size: 12pt;
 	text-align: justify;
 	text-justify: inter-word;
