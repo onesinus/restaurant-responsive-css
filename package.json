@@ -10,7 +10,7 @@
     "lint": "eslint ./src"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "Onesinus SPT <onesinus231@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "idb": "^6.1.2",
-    "regenerator-runtime": "^0.13.5"
+    "regenerator-runtime": "^0.13.5",
+    "serviceworker-webpack-plugin": "^1.0.1"
   }
 }

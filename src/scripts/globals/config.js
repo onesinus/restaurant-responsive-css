@@ -8,7 +8,8 @@ const CONFIG = {
   NO_IMAGE_URL: 'https://picsum.photos/id/666/800/450?grayscale',
   DATABASE_NAME: 'restaurant-database',
   DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'restaurants'
+  OBJECT_STORE_NAME: 'restaurants',
+  CACHE_NAME: `restaurant-${new Date().toISOString()}`
 }
 
 export default CONFIG

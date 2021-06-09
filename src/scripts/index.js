@@ -1,6 +1,7 @@
 import 'regenerator-runtime'
 
 import App from './views/app'
+import ServiceWorkerRegistration from './utils/service-worker-registration'
 
 import '../styles/main.css'
 import '../styles/card.css'
@@ -20,4 +21,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage()
+  ServiceWorkerRegistration()
 })
