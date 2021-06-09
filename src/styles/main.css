@@ -164,3 +164,17 @@ footer {
 .nobold {
 	font-weight: 500;
 }
+
+.fa {
+	color: green;
+}
+
+.favorite {
+	font-size:30px;
+	color: white;
+	border: 0;
+	border-radius: 10%;
+	width: 55px;
+	height: 55px;
+	cursor: pointer;
+}

@@ -10,7 +10,7 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 })
 
 const FavoriteRestaurant = {
-  async getRestaurnt (id) {
+  async getRestaurant (id) {
     return (await dbPromise).get(OBJECT_STORE_NAME, id)
   },
   async getRestaurants () {
