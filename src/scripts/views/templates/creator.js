@@ -87,7 +87,12 @@ const createFavoritedButtonTemplate = () => `
   </button>
 `
 
+const createLoaderTemplate = () => `
+  <div style="margin: 10px auto" id="loader" class="loader"></div>
+`
+
 export {
+  createLoaderTemplate,
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
   createFavoriteButtonTemplate,

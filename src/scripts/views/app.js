@@ -1,6 +1,7 @@
 import Drawer from '../utils/drawer-initiator'
 import UrlParser from '../routes/url-parser'
 import routes from '../routes/route'
+import { createLoaderTemplate } from './templates/creator'
 
 class App {
   constructor ({ button, drawer, content }) {
@@ -19,12 +20,23 @@ class App {
     })
   }
 
+  _addLoader () {
+    this._content.innerHTML = createLoaderTemplate()
+  }
+
+  _removeLoader () {
+    document.querySelector('#loader').remove()
+  }
+
   async renderPage () {
     const url = UrlParser.parseActiveUrlWithCombiner()
     const page = routes[url]
 
-    this._content.innerHTML = await page.render()
+    this._addLoader()
+    this._content.innerHTML += await page.render()
+
     await page.afterRender()
+    this._removeLoader()
   }
 }
 

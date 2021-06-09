@@ -7,6 +7,7 @@ import ServiceWorkerRegistration from './utils/service-worker-registration'
 import '../styles/main.css'
 import '../styles/card.css'
 import '../styles/responsive.css'
+import '../styles/loader.css'
 
 import './views/elements/vertical-information'
 
