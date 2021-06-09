@@ -41,36 +41,55 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
     <div class="card-item">
         <div class="card-body">
-            <h5><i class="fa fa-cutlery"></i> Categories</h5>
-            <p class='text-center mt2'>
-                ${restaurant.categories.map(category => category.name)}
-            </p>
- 
-            <br/>
-            <h5><i class="fa fa-map-marker"></i> Location</h5>
-            <p class='text-center mt2'>
-                ${restaurant.address}
-            </p>
- 
-            <br/> 
-            <h5><i class="fa fa-coffee"></i> Foods & Drinks</h5>
-            <p class='text-center mt2'>
-                ${restaurant.menus.foods.map(food => food.name)}
-                ${restaurant.menus.drinks.map(drink => drink.name)}
-            </p>
+            <vertical-information
+                icon="fa fa-cutlery"
+                title="Categories"
+                content="${restaurant.categories.map(category => category.name)}"
+            ></vertical-information>            
 
-            <br/> 
-            <h5><i class="fa fa-comments"></i> Reviews</h5>
-            <p class='text-center mt2'>
-                ${restaurant.customerReviews.slice(0, 5).map(customerReview => `
-                    ${maxString(customerReview.review, 500)} - ${customerReview.name} <br/>
-                `)}
-            </p>
+             <vertical-information
+                icon="fa fa-map-marker"
+                title="Location"
+                content="${restaurant.address}"
+            ></vertical-information>
+ 
+            <vertical-information
+                icon="fa fa-coffee"
+                title="Foods & Drinks"
+                content="
+                    ${restaurant.menus.foods.map(food => food.name)}
+                    ${restaurant.menus.drinks.map(drink => drink.name)}                
+                "
+            ></vertical-information>
+
+            <vertical-information
+                icon="fa fa-comments"
+                title="Reviews"
+                content="
+                    ${restaurant.customerReviews.slice(0, 5).map(customerReview => `
+                        ${maxString(customerReview.review, 500)} @<b>${customerReview.name}</b> <br/>
+                    `)}
+                "
+            ></vertical-information>            
         </div>
     </div>
 `
 
+const createFavoriteButtonTemplate = () => `
+  <button aria-label="Add this restaurant to favorite" id="favoriteButton" class="favorite">
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`
+
+const createFavoritedButtonTemplate = () => `
+  <button aria-label="Remove this restaurant from favorite" id="removeFavoriteButton" class="favorite">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`
+
 export {
   createRestaurantItemTemplate,
-  createRestaurantDetailTemplate
+  createRestaurantDetailTemplate,
+  createFavoriteButtonTemplate,
+  createFavoritedButtonTemplate
 }

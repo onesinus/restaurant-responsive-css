@@ -5,7 +5,7 @@ import UrlParser from '../../routes/url-parser'
 const Detail = {
   async render () {
     return `
-        <h5 class="title mt2">Detail Restaurant</h5>
+        <h5 class="title mt2">Detail Restaurant </h5>
         <div class="cards m2" id="restaurant">
             
         </div>

@@ -6,6 +6,8 @@ import '../styles/main.css'
 import '../styles/card.css'
 import '../styles/responsive.css'
 
+import './views/elements/vertical-information'
+
 const app = new App({
   button: document.querySelector('#hamburger'),
   drawer: document.querySelector('#drawer'),
