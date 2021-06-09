@@ -7,14 +7,14 @@ const CacheHelper = {
   },
 
   async deleteOldCache () {
-    const cacheNames = await caches.keys()
+    const cacheNames = await global.caches.keys()
     cacheNames
       .filter((name) => name !== CONFIG.CACHE_NAME)
-      .map((filteredName) => caches.delete(filteredName))
+      .map((filteredName) => global.caches.delete(filteredName))
   },
 
   async revalidateCache (request) {
-    const response = await caches.match(request)
+    const response = await global.caches.match(request)
 
     if (response) {
       return response
@@ -24,7 +24,7 @@ const CacheHelper = {
   },
 
   async _openCache () {
-    return caches.open(CONFIG.CACHE_NAME)
+    return global.caches.open(CONFIG.CACHE_NAME)
   },
 
   async _fetchRequest (request) {
@@ -33,13 +33,14 @@ const CacheHelper = {
       return response
     }
 
-    await this._addCache(request)
+    const cacheResponse = response.clone()
+    await this._putCache(request, cacheResponse)
     return response
   },
 
-  async _addCache (request) {
+  async _putCache (request, cacheResponse) {
     const cache = await this._openCache()
-    cache.add(request)
+    cache.put(request, cacheResponse)
   }
 }
 
