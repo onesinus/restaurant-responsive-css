@@ -35,8 +35,13 @@ class App {
     this._addLoader()
     this._content.innerHTML += await page.render()
 
-    await page.afterRender()
-    this._removeLoader()
+    try {
+      await page.afterRender()
+    } catch (error) {
+      alert(error)
+    } finally {
+      this._removeLoader()
+    }
   }
 }
 
