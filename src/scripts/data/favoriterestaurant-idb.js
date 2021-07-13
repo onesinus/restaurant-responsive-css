@@ -1,13 +1,19 @@
-import { openDB } from 'idb'
 import CONFIG from '../globals/config'
 
 const { DATABASE_NAME, DATABASE_VERSION, OBJECT_STORE_NAME } = CONFIG
 
-const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
-  upgrade (database) {
-    database.createObjectStore(OBJECT_STORE_NAME, { keyPath: 'id' })
-  }
-})
+const inisiateDB = (openDB) => {
+  openDB(DATABASE_NAME, DATABASE_VERSION, {
+    upgrade (database) {
+      database.createObjectStore(OBJECT_STORE_NAME, { keyPath: 'id' })
+    }
+  })
+}
+
+const dbPromise = import('idb')
+  .then((module) => module.openDB)
+  .then(inisiateDB)
+  .catch((error) => alert(error))
 
 const FavoriteRestaurant = {
   async getRestaurant (id) {
