@@ -11,6 +11,9 @@ import '../styles/loader.css'
 
 import './views/elements/vertical-information'
 
+import 'lazysizes'
+import 'lazysizes/plugins/parent-fit/ls.parent-fit'
+
 const drawer = document.querySelector('#drawer')
 
 const app = new App({

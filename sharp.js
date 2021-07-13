@@ -10,13 +10,13 @@ if (!fs.existsSync(destination)) {
 }
 
 fs.readdirSync(target).forEach(image => {
-  sharp(`${target}/${image}`).resize(800)
+  sharp(`${target}/${image}`).toFormat('webp').resize(800)
     .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
     .slice(0, -1)
-    .join('.')}-lg.jpg`))
+    .join('.')}-lg.webp`))
 
-  sharp(`${target}/${image}`).resize(480)
+  sharp(`${target}/${image}`).toFormat('webp').resize(480)
     .toFile(path.resolve(__dirname, `${destination}/${image.split('.')
     .slice(0, -1)
-    .join('.')}-sm.jpg`))
+    .join('.')}-sm.webp`))
 })

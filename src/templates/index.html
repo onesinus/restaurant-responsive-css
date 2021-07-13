@@ -52,8 +52,28 @@
 	</header>
 	<section class="jumbotron">
 		<picture>
-			<source media="(max-width: 600px)" srcset="./images/heros/hero-image_4-sm.jpg">
-			<img src="./images/heros/hero-image_4-lg.jpg" alt="Jumbotron: Great taste for your day!">
+			<source 
+				class="lazyload"
+				media="(max-width: 600px)" 
+				type="image/webp" 
+				srcset="./images/heros/hero-image-sm.webp"
+			>
+			<source 
+				class="lazyload"
+				type="image/webp" 
+				srcset="./images/heros/hero-image-lg.webp"
+			>
+			<source 
+				class="lazyload"
+				type="image/webp" 
+				srcset="./images/heros/hero-image.webp"
+			>
+
+			<img 
+				class="lazyload"
+				src="./images/heros/hero-image.jpg" 
+				alt="Jumbotron: Great taste for your day!"
+			>
 		</picture>		
 		<div class="text-block">
 			<h4>Uniqueness</h4>

@@ -5,7 +5,8 @@ const createRestaurantItemTemplate = (restaurant) => `
     <div class="card-item">
         <div class="card-header">
             <img 
-                src="${restaurant.pictureId ? `${CONFIG.BASE_IMAGE_MEDIUM_URL}/${restaurant.pictureId}` : CONFIG.NO_IMAGE_URL}"
+                class="lazyload"
+                data-src="${restaurant.pictureId ? `${CONFIG.BASE_IMAGE_MEDIUM_URL}/${restaurant.pictureId}` : CONFIG.NO_IMAGE_URL}"
                 width="350" 
                 height="350" 
                 alt="${restaurant.name}"
@@ -25,7 +26,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div class="card-item">
         <div class="card-header">
             <img 
-                src="${restaurant.pictureId ? `${CONFIG.BASE_IMAGE_MEDIUM_URL}/${restaurant.pictureId}` : CONFIG.NO_IMAGE_URL}"
+                class="lazyload"
+                data-src="${restaurant.pictureId ? `${CONFIG.BASE_IMAGE_MEDIUM_URL}/${restaurant.pictureId}` : CONFIG.NO_IMAGE_URL}"
                 width="350" 
                 height="350" 
                 alt="${restaurant.name}"
