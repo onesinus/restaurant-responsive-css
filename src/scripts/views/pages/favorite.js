@@ -21,7 +21,7 @@ const Home = {
       })
     } else {
       restaurantsContainer.remove()
-      titleContainer.innerHTML += '<h4 class="mt4 mb4">No Favorited...</h4>'
+      titleContainer.innerHTML += '<h4 class="favorited-restaurants__not__found mt4 mb4">No Favorited...</h4>'
     }
   }
 }
