@@ -11,7 +11,12 @@ a, button {
 
 body, #drawer, main {
 	height: 100%;
-	width: 100%	
+	width: 100%;
+	overflow-x: hidden;
+}
+
+#drawer {
+	overflow-y: hidden;
 }
 
 header {
@@ -93,7 +98,7 @@ a:hover {
 .jumbotron img {
     display: block;
 	width: 100%;
-	min-width: 420px;
+	/* min-width: 420px; */
     object-fit: cover;
 }
 

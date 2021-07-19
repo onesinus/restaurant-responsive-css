@@ -14,8 +14,11 @@ const createRestaurantItemTemplate = (restaurant) => `
         </div>
         <div class="card-body">
             <h5>
-                <a href="/#/detail/${restaurant.id}">${restaurant.city}</a>
+                <a href="/#/detail/${restaurant.id}">
+                    ${maxString(restaurant.name, 10)}
+                </a>
             </h5>
+            <h6>${restaurant.city}</h6>
             <h6><i class="fa fa-star"></i> ${restaurant.rating}</h6>
             <p class='description'>${maxString(restaurant.description, 300)}</p>
         </div>
@@ -36,7 +39,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
     <div class="card-item">
         <div class="card-body">
-            <h5>${restaurant.city}</h5>
+            <h5>${restaurant.name}</h5>
+            <h6>${restaurant.city}</h6>
             <h6><i class="fa fa-star"></i> ${restaurant.rating}</h6>
             <p class='description'>${maxString(restaurant.description, 1000)}</p>
         </div>
